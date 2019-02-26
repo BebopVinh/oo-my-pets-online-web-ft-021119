@@ -55,7 +55,6 @@ class Owner
       array.each {|pet| pet.mood = 'nervous'}
     end
   end
-  end
 
   def self.all
     @@all
