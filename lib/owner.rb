@@ -58,8 +58,9 @@ class Owner
   end
 
   def list_pets
-    print "I have #{self.pets[:fishes].count} fish, #{self.pets[:dogs].count} dog(s),
-    and #{self.pets[:cats].count} cat(s)."
+    count = []
+    self.pets.each_value {|pets| count << pets.count}
+    "I have #{count[0]} fish, #{count[1]} dog(s), and #{count[2]} cat(s)."
   end
 
   def self.all
